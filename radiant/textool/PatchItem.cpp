@@ -1,6 +1,5 @@
 #include "PatchItem.h"
 
-#include "patch/Patch.h"
 #include "PatchVertexItem.h"
 
 namespace selection {
