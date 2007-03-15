@@ -21,6 +21,10 @@ public:
 	STRING_CONSTANT(Name, "ObjectivesEditor");
 	typedef IPlugin Type;
 
+	/**
+	 * API constructor, registers the commands in the Event manager and UI
+	 * manager.
+	 */
 	ObjectivesEditorAPI() {
 		
 		// Add the callback event
@@ -36,11 +40,14 @@ public:
 				"Objectives...",
 				"objectives16.png",
 				"ObjectivesEditor");
-		std::cout << "ObjectivesEditor constructed." << std::endl;
 	}
 	
+	/**
+	 * SingletonModule requires a getTable() method, although for plugins it is
+	 * unused.
+	 */
 	IPlugin* getTable() {
-		return this;
+		assert(false);
 	}	
 };
 
