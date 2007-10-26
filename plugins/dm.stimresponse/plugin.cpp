@@ -14,7 +14,7 @@
 #include "StimResponseEditor.h" 
 
 /**
- * Module to register the menu commands for the ObjectivesEditor class.
+ * Module to register the menu commands for the Stim/Response Editor class.
  */
 class StimResponseModule : 
 	public RegisterableModule
