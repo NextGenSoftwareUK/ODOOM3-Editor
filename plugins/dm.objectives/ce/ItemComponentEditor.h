@@ -41,7 +41,7 @@ class ItemComponentEditor :
 public:
 
 	/**
-	 * Construct a default KillComponentEditor.
+	 * Construct a default ItemComponentEditor.
 	 */
 	ItemComponentEditor() : 
 		_component(NULL)
