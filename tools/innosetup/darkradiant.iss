@@ -3,17 +3,19 @@
 
 [Setup]
 AppName=DarkRadiant
-AppVerName=DarkRadiant 0.9.9pre3 x64
+AppVerName=DarkRadiant 0.9.9
 AppPublisher=The Dark Mod
 AppPublisherURL=http://www.thedarkmod.com
 AppSupportURL=http://www.thedarkmod.com
 AppUpdatesURL=http://www.thedarkmod.com
-DefaultDirName={pf64}\DarkRadiant
-DefaultGroupName=DarkRadiant 0.9.9.pre3 x64
+DefaultDirName={pf}\DarkRadiant
+DefaultGroupName=DarkRadiant 0.9.9
 OutputDir=C:\Games\DarkRadiant\tools\innosetup
-OutputBaseFilename=darkradiant-0.9.9pre3.x64
+OutputBaseFilename=darkradiant-0.9.9
 Compression=lzma
 SolidCompression=yes
+;ArchitecturesAllowed=x64
+;ArchitecturesInstallIn64BitMode=x64
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
