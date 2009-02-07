@@ -13,7 +13,6 @@
 #include "ui/einspector/EntityInspector.h"
 #include "ui/texturebrowser/TextureBrowser.h"
 #include "xyview/GlobalXYWnd.h"
-#include "log/Console.h"
 
 namespace ui {
 
@@ -46,9 +45,6 @@ void RegularLayout::activate() {
 	GtkWidget* texWindow = gtkutil::FramedWidget(
 		GlobalTextureBrowser().constructWindow(parent)
 	);
-
-	// Create the Console
-	GtkWidget* console = Console::Instance().getWidget();
 
 	// Now pack those widgets into the paned widgets
 
