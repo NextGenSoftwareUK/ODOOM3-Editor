@@ -93,7 +93,7 @@ scene::INodePtr BrushDef3Parser::parse(parser::DefTokeniser& tok) const
 		}
 		else {
 			throw parser::ParseException(
-				"BrushTokenImporter: invalid token '" + token + "'"
+				"BrushDef3Parser: invalid token '" + token + "'"
 			);
 		}
 	}
