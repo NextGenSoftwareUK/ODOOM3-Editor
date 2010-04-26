@@ -41,7 +41,7 @@ class ReadableOpenedComponentEditor :
 public:
 
 	/**
-	 * Construct a default ItemComponentEditor.
+	 * Construct a default ReadableOpenedComponentEditor.
 	 */
 	ReadableOpenedComponentEditor() : 
 		_widget(NULL),
@@ -49,7 +49,7 @@ public:
 	{}
 	
 	/**
-	 * Construct an ItemComponentEditor with a Component object to display and
+	 * Construct an ReadableOpenedComponentEditor with a Component object to display and
 	 * edit.
 	 * 
 	 * @param component
