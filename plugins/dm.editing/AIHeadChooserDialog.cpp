@@ -73,9 +73,9 @@ AIHeadChooserDialog::AIHeadChooserDialog() :
 	// Head Name column
 	gtk_tree_view_append_column(headsView, gtkutil::TextColumn("", 0));
 
-	// Right: the treeview
+	// Left: the treeview
 	gtk_box_pack_start(GTK_BOX(hbx), gtkutil::ScrolledFrame(GTK_WIDGET(headsView)), TRUE, TRUE, 0);
-	// Left: the preview and the description
+	// Right: the preview and the description
 	GtkWidget* vbox2 = gtk_vbox_new(FALSE, 3);
 	gtk_box_pack_start(GTK_BOX(vbox2), _preview->getWidget(), TRUE, TRUE, 0);
 	gtk_box_pack_start(GTK_BOX(vbox2), createDescriptionPanel(), FALSE, FALSE, 0);
