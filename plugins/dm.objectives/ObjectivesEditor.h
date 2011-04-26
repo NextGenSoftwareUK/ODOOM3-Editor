@@ -89,6 +89,7 @@ private:
 	void _onDeleteObjective();
 	void _onClearObjectives();
 	void _onEditLogic();
+	void _onEditObjConditions();
 
 	// Populate the dialog widgets with appropriate state from the map
 	void populateWidgets();
