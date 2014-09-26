@@ -9,8 +9,8 @@ namespace ui
 {
 
 /**
-* The CameraAngleTool is a single-click tool that re-orients
-* the camera such that the current mouse position is in its view.
+* The CameraAngleTool re-orients the camera such that 
+* the clicked location is in its view.
 */
 class CameraAngleTool :
     public MouseTool
