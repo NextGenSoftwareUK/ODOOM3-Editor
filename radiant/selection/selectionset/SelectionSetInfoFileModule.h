@@ -18,10 +18,8 @@ private:
 		// The name of this set
 		std::string name;
 
-		typedef std::pair<std::size_t, std::size_t> IndexPair;
-
 		// The node indices, which will be resolved to nodes after import
-		std::set<IndexPair> nodeIndices;
+		std::set<map::NodeIndexPair> nodeIndices;
 	};
 
 	// Parsed selection set information
@@ -35,11 +33,8 @@ private:
 		// The nodes in this set
 		std::set<scene::INodePtr> nodes;
 
-		// The entity and primitive number pair
-		typedef std::pair<std::size_t, std::size_t> IndexPair;
-
 		// The node indices, which will be resolved during traversal
-		std::set<IndexPair> nodeIndices;
+		std::set<map::NodeIndexPair> nodeIndices;
 	};
 
 	// SelectionSet-related
