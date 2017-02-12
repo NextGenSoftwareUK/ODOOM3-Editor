@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3ADBCC941E4E4C3400CA94F6"
+               BlueprintIdentifier = "3AEDE3991E4EEA1F005A8641"
                BuildableName = "DarkRadiant"
                BlueprintName = "DarkRadiant"
                ReferencedContainer = "container:DarkRadiant.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ADBCC941E4E4C3400CA94F6"
+            BlueprintIdentifier = "3AEDE3991E4EEA1F005A8641"
             BuildableName = "DarkRadiant"
             BlueprintName = "DarkRadiant"
             ReferencedContainer = "container:DarkRadiant.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ADBCC941E4E4C3400CA94F6"
+            BlueprintIdentifier = "3AEDE3991E4EEA1F005A8641"
             BuildableName = "DarkRadiant"
             BlueprintName = "DarkRadiant"
             ReferencedContainer = "container:DarkRadiant.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ADBCC941E4E4C3400CA94F6"
+            BlueprintIdentifier = "3AEDE3991E4EEA1F005A8641"
             BuildableName = "DarkRadiant"
             BlueprintName = "DarkRadiant"
             ReferencedContainer = "container:DarkRadiant.xcodeproj">
