@@ -10,7 +10,7 @@
   engine_linux="Quake4"
   engine_macos="Quake4.app"
   prefix=".quake4"
-  basegame="base"
+  basegame="q4base"
   basegamename="Quake 4"
   unknowngamename="Custom Quake 4 modification"
   archivetypes="pk4"
