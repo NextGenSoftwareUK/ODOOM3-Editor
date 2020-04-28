@@ -24,10 +24,10 @@
     <ClCompile Include="..\..\radiant\log\LogStreamBuf.cpp" />
     <ClCompile Include="..\..\radiant\log\LogWriter.cpp" />
     <ClCompile Include="..\..\radiant\log\StringLogDevice.cpp" />
-    <ClCompile Include="..\..\radiant\modulesystem\DynamicLibrary.cpp" />
     <ClCompile Include="..\..\radiant\modulesystem\ModuleLoader.cpp" />
     <ClCompile Include="..\..\radiant\modulesystem\ModuleRegistry.cpp" />
     <ClCompile Include="..\..\radiant\modulesystem\StaticModule.cpp" />
+    <ClCompile Include="..\..\radiant\Radiant.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\radiant\log\COutRedirector.h" />
@@ -39,7 +39,6 @@
     <ClInclude Include="..\..\radiant\log\PIDFile.h" />
     <ClInclude Include="..\..\radiant\log\PopupErrorHandler.h" />
     <ClInclude Include="..\..\radiant\log\StringLogDevice.h" />
-    <ClInclude Include="..\..\radiant\modulesystem\DynamicLibrary.h" />
     <ClInclude Include="..\..\radiant\modulesystem\ModuleLoader.h" />
     <ClInclude Include="..\..\radiant\modulesystem\ModuleRegistry.h" />
     <ClInclude Include="..\..\radiant\modulesystem\StaticModule.h" />
@@ -79,6 +78,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="properties\DarkRadiant Base Debug Win32.props" />
+    <Import Project="properties\DarkRadiant Core Library.props" />
     <Import Project="properties\wxWidgets.props" />
     <Import Project="properties\libxml2.props" />
     <Import Project="properties\GLEW.props" />
@@ -88,6 +88,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="properties\DarkRadiant Base Release Win32.props" />
+    <Import Project="properties\DarkRadiant Core Library.props" />
     <Import Project="properties\wxWidgets.props" />
     <Import Project="properties\libxml2.props" />
     <Import Project="properties\GLEW.props" />
@@ -97,6 +98,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="properties\DarkRadiant Base Debug x64.props" />
+    <Import Project="properties\DarkRadiant Core Library.props" />
     <Import Project="properties\wxWidgets.props" />
     <Import Project="properties\libxml2.props" />
     <Import Project="properties\GLEW.props" />
@@ -106,6 +108,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="properties\DarkRadiant Base Release x64.props" />
+    <Import Project="properties\DarkRadiant Core Library.props" />
     <Import Project="properties\wxWidgets.props" />
     <Import Project="properties\libxml2.props" />
     <Import Project="properties\GLEW.props" />
@@ -140,7 +143,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>advapi32.lib;Dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;wsock32.lib;scenelib.lib;mathlib.lib;xmlutillib.lib;wxutillib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -154,7 +156,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>advapi32.lib;Dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;wsock32.lib;scenelib.lib;mathlib.lib;xmlutillib.lib;wxutillib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -173,7 +174,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>advapi32.lib;Dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;wsock32.lib;scenelib.lib;mathlib.lib;xmlutillib.lib;wxutillib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -192,7 +192,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>advapi32.lib;Dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;wsock32.lib;scenelib.lib;mathlib.lib;xmlutillib.lib;wxutillib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
