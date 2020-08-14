@@ -20,15 +20,6 @@
 namespace language
 {
 
-class UnknownLanguageException :
-	public std::runtime_error
-{
-public:
-	UnknownLanguageException(const std::string& what) :
-		std::runtime_error(what)
-	{}
-};
-
 namespace
 {
 	const char* const LANGUAGE_SETTING_FILE = "darkradiant.language";
@@ -65,6 +56,7 @@ void LanguageManager::initialiseModule(const ApplicationContext& ctx)
 {
 	rMessage() << getName() << "::initialiseModule called" << std::endl;
 
+#if 0
 	// Fill array of supported languages
 	loadSupportedLanguages();
 
@@ -109,10 +101,12 @@ void LanguageManager::initialiseModule(const ApplicationContext& ctx)
 	page.appendCombo(_("Language"), RKEY_LANGUAGE, langs);
 
 	page.appendLabel(_("<b>Note:</b> You'll need to restart DarkRadiant\nafter changing the language setting."));
+#endif
 }
 
 void LanguageManager::shutdownModule()
 {
+#if 0
 	// Get the language setting from the registry (this is an integer)
 	// and look up the language code (two digit)
 	int langNum = registry::getValue<int>(RKEY_LANGUAGE);
@@ -126,10 +120,12 @@ void LanguageManager::shutdownModule()
 
 	// Save the language code to the settings file
 	saveLanguageSetting(_supportedLanguages[langIndex].twoDigitCode);
+#endif
 }
 
 void LanguageManager::findAvailableLanguages()
 {
+#if 0
 	// English (index 0) is always available
 	_availableLanguages.push_back(0);
 
@@ -153,8 +149,10 @@ void LanguageManager::findAvailableLanguages()
 	}
 
 	rMessage() << "Found " << _availableLanguages.size() << " language folders." << std::endl;
+#endif
 }
 
+#if 0
 void LanguageManager::init(const ApplicationContext& ctx)
 {
 	// Instantiate a new language manager
@@ -166,9 +164,11 @@ void LanguageManager::init(const ApplicationContext& ctx)
 	// Pre-initialise the module manually
 	instancePtr->initFromContext(ctx);
 }
+#endif
 
 void LanguageManager::initFromContext(const ApplicationContext& ctx)
 {
+#if 0
 	// Initialise these members
 	_languageSettingFile = ctx.getSettingsPath() + LANGUAGE_SETTING_FILE;
 	_curLanguage = loadLanguageSetting();
@@ -184,15 +184,24 @@ void LanguageManager::initFromContext(const ApplicationContext& ctx)
 	// Keep locale set to "C" for faster stricmp in Windows builds
 	_wxLocale.reset(new wxLocale(_curLanguage, _curLanguage, "C"));
 	_wxLocale->AddCatalog(GETTEXT_PACKAGE);
+#endif
 }
 
-std::string LanguageManager::getLocalizedString(const char* stringToLocalise)
+void LanguageManager::registerProvider(const ILocalisationProvider::Ptr& instance)
 {
-	return stringToLocalise; // TODO
+	assert(!_provider); // only one provider supported right now
+
+	_provider = instance;
+}
+
+std::string LanguageManager::getLocalisedString(const char* stringToLocalise)
+{
+	return _provider ? _provider->getLocalisedString(stringToLocalise) : stringToLocalise;
 }
 
 std::string LanguageManager::loadLanguageSetting()
 {
+#if 0
 	std::string language = DEFAULT_LANGUAGE;
 
 	// Check for an existing language setting file in the user settings folder
@@ -204,30 +213,38 @@ std::string LanguageManager::loadLanguageSetting()
 	}
 
 	return language;
+#endif // 0
+
+	return DEFAULT_LANGUAGE;
 }
 
 void LanguageManager::saveLanguageSetting(const std::string& language)
 {
+#if 0
 	std::ofstream str(_languageSettingFile.c_str());
 
 	str << language;
 
 	str.flush();
 	str.close();
+#endif // 0
 }
 
 void LanguageManager::loadSupportedLanguages()
 {
+#if 0
 	_supportedLanguages.clear();
 
 	int index = 0;
 
 	_supportedLanguages[index++] = Language("en", _("English"));
 	_supportedLanguages[index++] = Language("de", _("German"));
+#endif // 0
 }
 
 int LanguageManager::getLanguageIndex(const std::string& languageCode)
 {
+#if 0
 	std::string code = string::to_lower_copy(languageCode);
 
 	for (const auto& pair : _supportedLanguages)
@@ -239,6 +256,10 @@ int LanguageManager::getLanguageIndex(const std::string& languageCode)
 	}
 
 	throw UnknownLanguageException("Unknown language: " + languageCode);
+#endif // 0
+	return -1;
 }
+
+module::StaticModule<LanguageManager> languageManagerModule;
 
 } // namespace

@@ -16,6 +16,7 @@ class LanguageManager :
 	public ILanguageManager
 {
 private:
+#if 0
 	// The current language string (e.g. "en_US")
 	std::string _curLanguage;
 	std::string _languageSettingFile;
@@ -46,6 +47,9 @@ private:
 	// Available languages (for the preference page)
 	typedef std::vector<int> LanguageList;
 	LanguageList _availableLanguages;
+#endif
+	// For now, we only hold one provider instance
+	ILocalisationProvider::Ptr _provider;
 
 public:
 	LanguageManager();
@@ -57,11 +61,15 @@ public:
 	void initialiseModule(const ApplicationContext& ctx);
 	void shutdownModule();
 
+#if 0
 	// Method used to instantiate and register the module, and load settings
 	// This is called by main() even before any other modules are loaded
 	static void init(const ApplicationContext& ctx);
+#endif
 
-	std::string getLocalizedString(const char* stringToLocalise) override;
+	void registerProvider(const ILocalisationProvider::Ptr& instance) override;
+
+	std::string getLocalisedString(const char* stringToLocalise) override;
 
 private:
 	void initFromContext(const ApplicationContext& ctx);
