@@ -14,7 +14,7 @@ private:
 	MaterialPtr _material;
 
 public:
-	MaterialDefinitionView(const std::string& shaderName);
+	MaterialDefinitionView(const std::string& shaderName, wxWindow* parent = nullptr);
 
 	void setShader(const std::string& shader);
 
