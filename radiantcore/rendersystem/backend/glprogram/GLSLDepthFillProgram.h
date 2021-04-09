@@ -1,24 +1,15 @@
 #pragma once
 
-#include "iglprogram.h"
-#include "igl.h"
+#include "GLSLProgramBase.h"
 
 namespace render
 {
 
 class GLSLDepthFillProgram :
-	public GLProgram
+	public GLSLProgramBase
 {
-    // Program object
-    GLuint _programObj;
-
 public:
-
-    /* GLProgram implementation */
-    void create();
-    void destroy();
-    void enable();
-    void disable();
+    void create() override;
 };
 
 } // namespace render
