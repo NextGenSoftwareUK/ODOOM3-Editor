@@ -8,7 +8,7 @@
   <selectionGroups/>
   <selectionSets/>
   <properties>
-    <property key="EditTimeInSeconds" value="287"/>
+    <property key="EditTimeInSeconds" value="367"/>
     <property key="LastCameraAngle" value="-36.9 45.6 0"/>
     <property key="LastCameraPosition" value="-81.4144 -139.899 261.902"/>
     <property key="LastShaderClipboardMaterial" value="textures/numbers/2"/>
@@ -174,14 +174,14 @@
       <patch number="4" width="3" height="3" fixedSubdivisions="false">
         <material name="textures/numbers/1"/>
         <controlVertices>
-          <controlVertex row="0" column="0" x="-64.000043" y="63.999957" z="0" u="0" v="0"/>
-          <controlVertex row="1" column="0" x="-64.000043" y="95.999978" z="0" u="0" v="-1.000001"/>
-          <controlVertex row="2" column="0" x="-64.000043" y="128.000000" z="0" u="0" v="-2.000001"/>
-          <controlVertex row="0" column="1" x="-32.000022" y="63.999957" z="0" u="1.000001" v="0"/>
-          <controlVertex row="1" column="1" x="-32.000022" y="95.999978" z="0" u="1.000001" v="-1.000001"/>
-          <controlVertex row="2" column="1" x="-32.000022" y="128.000000" z="0" u="1.000001" v="-2.000001"/>
-          <controlVertex row="0" column="2" x="0" y="63.999957" z="0" u="2.000001" v="0"/>
-          <controlVertex row="1" column="2" x="0" y="95.999978" z="0" u="2.000001" v="-1.000001"/>
+          <controlVertex row="0" column="0" x="-64.000046" y="63.999958" z="0" u="0" v="0"/>
+          <controlVertex row="1" column="0" x="-64.000046" y="95.999977" z="0" u="0" v="-1.000001"/>
+          <controlVertex row="2" column="0" x="-64.000046" y="128.000000" z="0" u="0" v="-2.000001"/>
+          <controlVertex row="0" column="1" x="-32.000023" y="63.999958" z="0" u="1.000001" v="0"/>
+          <controlVertex row="1" column="1" x="-32.000023" y="95.999977" z="0" u="1.000001" v="-1.000001"/>
+          <controlVertex row="2" column="1" x="-32.000023" y="128.000000" z="0" u="1.000001" v="-2.000001"/>
+          <controlVertex row="0" column="2" x="0" y="63.999958" z="0" u="2.000001" v="0"/>
+          <controlVertex row="1" column="2" x="0" y="95.999977" z="0" u="2.000001" v="-1.000001"/>
           <controlVertex row="2" column="2" x="0" y="128.000000" z="0" u="2.000001" v="-2.000001"/>
         </controlVertices>
         <layers>
@@ -193,14 +193,14 @@
       <patch number="5" width="3" height="3" fixedSubdivisions="false">
         <material name="textures/numbers/2"/>
         <controlVertices>
-          <controlVertex row="0" column="0" x="-0.000043" y="63.999957" z="0" u="1.999999" v="-0.000001"/>
-          <controlVertex row="1" column="0" x="-0.000043" y="95.999978" z="0" u="2.999999" v="-0.000001"/>
+          <controlVertex row="0" column="0" x="-0.000043" y="63.999958" z="0" u="1.999999" v="-0.000001"/>
+          <controlVertex row="1" column="0" x="-0.000043" y="95.999977" z="0" u="2.999999" v="-0.000001"/>
           <controlVertex row="2" column="0" x="-0.000043" y="128.000000" z="0" u="4.000000" v="-0.000001"/>
-          <controlVertex row="0" column="1" x="31.999978" y="63.999957" z="0" u="1.999999" v="0.999999"/>
-          <controlVertex row="1" column="1" x="31.999978" y="95.999978" z="0" u="2.999999" v="0.999999"/>
-          <controlVertex row="2" column="1" x="31.999978" y="128.000000" z="0" u="4.000000" v="0.999999"/>
-          <controlVertex row="0" column="2" x="64.000000" y="63.999957" z="0" u="1.999999" v="2.000000"/>
-          <controlVertex row="1" column="2" x="64.000000" y="95.999978" z="0" u="2.999999" v="2.000000"/>
+          <controlVertex row="0" column="1" x="31.999977" y="63.999958" z="0" u="1.999999" v="0.999999"/>
+          <controlVertex row="1" column="1" x="31.999977" y="95.999977" z="0" u="2.999999" v="0.999999"/>
+          <controlVertex row="2" column="1" x="31.999977" y="128.000000" z="0" u="4.000000" v="0.999999"/>
+          <controlVertex row="0" column="2" x="64.000000" y="63.999958" z="0" u="1.999999" v="2.000000"/>
+          <controlVertex row="1" column="2" x="64.000000" y="95.999977" z="0" u="2.999999" v="2.000000"/>
           <controlVertex row="2" column="2" x="64.000000" y="128.000000" z="0" u="4.000000" v="2.000000"/>
         </controlVertices>
         <layers>
@@ -304,9 +304,55 @@
     <keyValues>
       <keyValue key="classname" value="func_static"/>
       <keyValue key="name" value="func_static_1"/>
+      <keyValue key="dummyspawnarg" value="dummyvalue"/>
       <keyValue key="model" value="func_static_1"/>
       <keyValue key="origin" value="96 -32 0"/>
-      <keyValue key="dummyspawnarg" value="dummyvalue"/>
+    </keyValues>
+    <layers>
+      <layer id="0"/>
+    </layers>
+    <selectionGroups/>
+    <selectionSets/>
+  </entity>
+  <entity number="2">
+    <primitives/>
+    <keyValues>
+      <keyValue key="classname" value="light"/>
+      <keyValue key="name" value="light_2"/>
+      <keyValue key="light_center" value="0 0 0"/>
+      <keyValue key="light_radius" value="208 208 320"/>
+      <keyValue key="origin" value="256 96 0"/>
+    </keyValues>
+    <layers>
+      <layer id="0"/>
+    </layers>
+    <selectionGroups/>
+    <selectionSets/>
+  </entity>
+  <entity number="3">
+    <primitives/>
+    <keyValues>
+      <keyValue key="classname" value="light"/>
+      <keyValue key="name" value="light_1"/>
+      <keyValue key="ai_see" value="0"/>
+      <keyValue key="light_center" value="0 0 0"/>
+      <keyValue key="light_radius" value="208 208 320"/>
+      <keyValue key="origin" value="144 96 0"/>
+      <keyValue key="break" value="1"/>
+    </keyValues>
+    <layers>
+      <layer id="0"/>
+    </layers>
+    <selectionGroups/>
+    <selectionSets/>
+  </entity>
+  <entity number="4">
+    <primitives/>
+    <keyValues>
+      <keyValue key="classname" value="info_player_start"/>
+      <keyValue key="name" value="info_player_start_1"/>
+      <keyValue key="origin" value="64 160 0"/>
+      <keyValue key="angle" value="90"/>
     </keyValues>
     <layers>
       <layer id="0"/>
