@@ -76,10 +76,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define INFO_HEIGHT 5
 #define INFO_Y (SKINPAGE_HEIGHT-INFO_HEIGHT)
 
-#ifndef byte
-	#define byte unsigned char
-#endif
-
 
 //
 //	Generic header on every chunk
