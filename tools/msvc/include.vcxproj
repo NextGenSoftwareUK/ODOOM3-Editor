@@ -116,7 +116,6 @@
     <ClInclude Include="..\..\include\icurve.h" />
     <ClInclude Include="..\..\include\idatastream.h" />
     <ClInclude Include="..\..\include\idecltypes.h" />
-    <ClInclude Include="..\..\include\idialogmanager.h" />
     <ClInclude Include="..\..\include\ieclass.h" />
     <ClInclude Include="..\..\include\ieclasscolours.h" />
     <ClInclude Include="..\..\include\ieditstopwatch.h" />
@@ -219,8 +218,10 @@
     <ClInclude Include="..\..\include\precompiled_interfaces.h" />
     <ClInclude Include="..\..\include\precompiled_main.h" />
     <ClInclude Include="..\..\include\precompiled_math.h" />
+    <ClInclude Include="..\..\include\precompiled_ui_interfaces.h" />
     <ClInclude Include="..\..\include\StringSerialisable.h" />
     <ClInclude Include="..\..\include\Texture.h" />
+    <ClInclude Include="..\..\include\ui\idialogmanager.h" />
     <ClInclude Include="..\..\include\version.h" />
     <ClInclude Include="..\..\include\VolumeIntersectionValue.h" />
   </ItemGroup>
