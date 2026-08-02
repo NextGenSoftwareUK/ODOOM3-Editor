@@ -40,20 +40,6 @@ entityDef oasis_portal_exit
     "editor_var oasis_thing_type"   "OASIS thing type"
 }
 
-entityDef oasis_portal
-{
-    "editor_color"          "0 0.75 1"
-    "editor_mins"           "-12 -12 -12"
-    "editor_maxs"           "12 12 12"
-    "editor_usage"          "OASIS Omniverse legacy portal point. Prefer oasis_portal_enter + oasis_portal_exit for new maps. OASIS thing type 5900."
-    "editor_displayFolder"  "OASIS Omniverse/Portals"
-
-    "oasis_game_id"         ""
-    "editor_var oasis_game_id"  "Target OGame ID (e.g. oquake, oquake2, odoom, oduke3d, owolf3d)"
-
-    "oasis_thing_type"      "5900"
-    "editor_var oasis_thing_type"  "OASIS thing type (5900 = portal, shared across all OGames)"
-}
 
 entityDef oasis_key_blue
 {
