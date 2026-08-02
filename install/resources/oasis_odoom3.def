@@ -1,0 +1,55 @@
+// OASIS Omniverse — ODOOM3 entity definitions for DarkRadiant
+// Copy this file to <Doom3Install>/base/def/ to make these entities available in the editor.
+// Thing type range: 10001–10999 (ODOOM3)
+// Portal: 5900 (shared cross-game)
+
+entityDef oasis_portal
+{
+    "editor_color"          "0 0.75 1"
+    "editor_mins"           "-12 -12 -12"
+    "editor_maxs"           "12 12 12"
+    "editor_usage"          "OASIS Omniverse cross-game portal. Connects this Doom 3 map to other OASIS Omniverse games. OASIS thing type 5900."
+    "editor_displayFolder"  "OASIS Omniverse"
+
+    "oasis_game_id"         ""
+    "editor_var oasis_game_id"  "Target OGame ID (e.g. oquake, oquake2, odoom, oduke3d, owolf3d)"
+
+    "oasis_thing_type"      "5900"
+    "editor_var oasis_thing_type"  "OASIS thing type (5900 = portal, shared across all OGames)"
+}
+
+entityDef oasis_key_blue
+{
+    "editor_color"          "0 0.5 1"
+    "editor_mins"           "-8 -8 -8"
+    "editor_maxs"           "8 8 8"
+    "editor_usage"          "OASIS blue key — collected cross-game via STAR inventory. OASIS thing type 10001."
+    "editor_displayFolder"  "OASIS Omniverse/Keys"
+
+    "oasis_thing_type"      "10001"
+    "editor_var oasis_thing_type"  "OASIS thing type"
+}
+
+entityDef oasis_key_yellow
+{
+    "editor_color"          "1 0.9 0"
+    "editor_mins"           "-8 -8 -8"
+    "editor_maxs"           "8 8 8"
+    "editor_usage"          "OASIS yellow key — collected cross-game via STAR inventory. OASIS thing type 10002."
+    "editor_displayFolder"  "OASIS Omniverse/Keys"
+
+    "oasis_thing_type"      "10002"
+    "editor_var oasis_thing_type"  "OASIS thing type"
+}
+
+entityDef oasis_key_red
+{
+    "editor_color"          "1 0.2 0.2"
+    "editor_mins"           "-8 -8 -8"
+    "editor_maxs"           "8 8 8"
+    "editor_usage"          "OASIS red key — collected cross-game via STAR inventory. OASIS thing type 10003."
+    "editor_displayFolder"  "OASIS Omniverse/Keys"
+
+    "oasis_thing_type"      "10003"
+    "editor_var oasis_thing_type"  "OASIS thing type"
+}
