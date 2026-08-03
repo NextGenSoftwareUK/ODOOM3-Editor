@@ -1,4 +1,4 @@
-#include "OASISPanel.h"
+﻿#include "OASISPanel.h"
 
 #include "i18n.h"
 #include "imodule.h"
@@ -15,14 +15,14 @@ typedef HMODULE DylibHandle;
 static DylibHandle dylib_open(const char* p) { return LoadLibraryA(p); }
 static void*  dylib_sym(DylibHandle h, const char* s) { return (void*)GetProcAddress(h,s); }
 static void   dylib_close(DylibHandle h) { FreeLibrary(h); }
-#  define OGEDITOR_LIBNAME "ogeditor_api.dll"
+#  define OGEDITOR_LIBNAME "OGEditorClient.dll"
 #else
 #  include <dlfcn.h>
 typedef void* DylibHandle;
 static DylibHandle dylib_open(const char* p) { return dlopen(p, RTLD_LAZY|RTLD_LOCAL); }
 static void*  dylib_sym(DylibHandle h, const char* s) { return dlsym(h, s); }
 static void   dylib_close(DylibHandle h) { dlclose(h); }
-#  define OGEDITOR_LIBNAME "libogeditor_api.so"
+#  define OGEDITOR_LIBNAME "libOGEditorClient.so"
 #endif
 
 /* Exported to OASISPanel.cpp */
@@ -72,7 +72,7 @@ static bool loadOGEditorSDK() {
         dylib_close(g_lib); g_lib = nullptr; return false;
     }
 
-    rMessage() << "[OASIS] ogeditor_api loaded OK.\n";
+    rMessage() << "[OASIS] OGEditorClient loaded OK.\n";
     return true;
 }
 
