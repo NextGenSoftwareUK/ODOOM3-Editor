@@ -134,6 +134,7 @@ if (${ENABLE_DM_PLUGINS})
     add_subdirectory(plugins/dm.editing)
     add_subdirectory(plugins/dm.gui)
     add_subdirectory(plugins/dm.gameconnection)
+    add_subdirectory(plugins/dm.oasis)
 endif()
 
 # Main radiant components
