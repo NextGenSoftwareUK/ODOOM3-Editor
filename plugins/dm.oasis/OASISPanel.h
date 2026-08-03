@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "wxutil/dialog/DialogBase.h"
 #include "wxutil/dataview/TreeView.h"
@@ -22,7 +22,7 @@ namespace oasis {
  *  Tab 2 – Portal Placer : creates/edits oasis_portal_enter entities in the map
  *  Tab 3 – Quest Binder  : lists quests and binds objectives to map triggers
  *
- * All SDK calls go through ogeditor_api.dll (loaded at plugin init time).
+ * All SDK calls go through OGEditorClient.dll (loaded at plugin init time).
  */
 class OASISPanel : public wxutil::DialogBase
 {

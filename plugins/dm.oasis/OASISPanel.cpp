@@ -1,4 +1,4 @@
-#include "OASISPanel.h"
+﻿#include "OASISPanel.h"
 
 #include "i18n.h"
 #include "icommandsystem.h"
@@ -10,9 +10,9 @@
 
 #include <cstdio>
 
-/* ogeditor_api.dll loaded at plugin init; function pointers set in oasis.cpp */
+/* OGEditorClient.dll loaded at plugin init; function pointers set in oasis.cpp */
 extern "C" {
-#include "ogeditor_api.h"
+#include "OGEditorClient.h"
 }
 
 /* These pointers are set by OASISModule::initialiseModule() in oasis.cpp */
@@ -142,7 +142,7 @@ OASISPanel::OASISPanel(wxWindow* parent)
 
 void OASISPanel::populateAssets() {
     if (!g_ogeditor_handle || !g_fn_get_assets) {
-        _assetJson->SetValue(_("SDK not initialised — is ogeditor_api.dll present?"));
+        _assetJson->SetValue(_("SDK not initialised — is OGEditorClient.dll present?"));
         return;
     }
     char buf[131072];
