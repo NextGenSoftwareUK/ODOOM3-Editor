@@ -53,6 +53,7 @@ private:
 
     // Quest Binder tab
     wxTextCtrl*   _questJson;
+    wxChoice*     _questGameFilter;
     wxTextCtrl*   _questId;
     wxTextCtrl*   _objectiveId;
 };

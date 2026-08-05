@@ -104,9 +104,17 @@ OASISPanel::OASISPanel(wxWindow* parent)
         wxPanel* tab = new wxPanel(_notebook);
         wxBoxSizer* s = new wxBoxSizer(wxVERTICAL);
 
+        wxBoxSizer* row = new wxBoxSizer(wxHORIZONTAL);
+        row->Add(new wxStaticText(tab, wxID_ANY, _("Game:")), 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 6);
+        _questGameFilter = new wxChoice(tab, wxID_ANY);
+        for (int i = 0; GAME_OPTIONS[i]; ++i)
+            _questGameFilter->Append(GAME_OPTIONS[i]);
+        _questGameFilter->SetSelection(0);
+        row->Add(_questGameFilter, 0, wxRIGHT, 8);
         wxButton* refreshQ = new wxButton(tab, wxID_ANY, _("Refresh Quests"));
         refreshQ->Bind(wxEVT_BUTTON, &OASISPanel::onRefreshQuests, this);
-        s->Add(refreshQ, 0, wxALL, 8);
+        row->Add(refreshQ, 0);
+        s->Add(row, 0, wxEXPAND|wxALL, 8);
 
         _questJson = new wxTextCtrl(tab, wxID_ANY, wxEmptyString,
             wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE|wxTE_READONLY|wxHSCROLL);
@@ -157,7 +165,8 @@ void OASISPanel::populateQuests() {
         return;
     }
     char buf[65536];
-    int rc = g_fn_get_quests(g_ogeditor_handle, "ODOOM3", buf, sizeof(buf));
+    std::string game = _questGameFilter->GetStringSelection().ToStdString();
+    int rc = g_fn_get_quests(g_ogeditor_handle, game.c_str(), buf, sizeof(buf));
     _questJson->SetValue(rc == 0 ? buf : wxString::Format("[error %d]", rc));
 }
 
@@ -181,9 +190,11 @@ void OASISPanel::onPlacePortal(wxCommandEvent& /*ev*/) {
         "{\"thingId\":1,\"x\":0.0,\"y\":0.0,"
         "\"destinationGame\":\"%s\","
         "\"destinationMap\":\"%s\","
+        "\"exitName\":\"%s\","
         "\"destinationX\":0.0,\"destinationY\":0.0,\"destinationZ\":0.0}",
         _dstGame->GetValue().ToStdString().c_str(),
-        _dstMap->GetValue().ToStdString().c_str());
+        _dstMap->GetValue().ToStdString().c_str(),
+        _dstExitName->GetValue().ToStdString().c_str());
 
     int rc = g_fn_append_portal(g_ogeditor_handle, mapPath.c_str(), js);
     if (rc == 0)
